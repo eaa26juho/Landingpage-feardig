@@ -1,0 +1,1031 @@
+
+:root {
+  --tekst:#a09f9f;
+  --overskrifter:#fefefe;
+  --baggrund:#282725 ;
+  --kontrast1:#6ccc6f;
+  --kontrast2:rgb(237, 237, 237);
+  --sovn:#629564;
+  --kontrast4:#F0EDE5;
+  --kontrast5:#aaa8a3;
+  --pang:#533146
+
+}
+
+h3{
+  font-size:12px;
+}
+
+.html{
+   margin: 0;
+   padding: 0;
+}
+
+
+
+
+nav{
+    position:sticky;
+    top:0; /*skal ikke ændres, da det betyder hvor høj i toppen den er, når den er sticky*/
+    z-index:1;
+    background-color:rgba(255, 255, 255,0.9); /* 0.7 er intensiteten på farven - 1.0 er fuld intensitet og 0.1 er meget gennemsigtig*/
+    text-align:center;
+    margin: 10px;
+    display:flex; /*HUSK altid at skrive display på */
+    justify-content: space-around; /*gør at elementerne i nav er spredt ud med jævnt mellemrum mellem tingene*/
+    align-items: center; /*gør at ting i nav er i midten af navigationsbaren (horizontalt)*/
+    border-radius: 7px; /*dette er hvor meget kanterne buer*/
+    height:70px;
+    font-size: 11px;
+
+}
+
+.navtekst{
+  color:black;
+  font-family: Albert Sans;
+}
+
+nav a img {
+  height:50px;
+  width: auto;
+}
+
+.navimg{
+  height:15px;
+  width: auto;
+}
+
+body{
+  background-color: var(--baggrund);
+}
+
+.button1{
+  border-radius: 30px;
+  padding: 15px 32px; /*dette er størrelsen på knappen*/
+  background-color:var(--kontrast1);
+  color:var(--overskrifter);
+}
+
+.knaptekst{
+  color: #545453;
+  font-family: "Teachers", Arial, sans-serif;
+  font-size: medium;
+  text-align: center;
+}
+
+
+h1{
+  text-align:center; 
+  font-family: Albert Sans; 
+}
+
+.start{
+    font-size:12px;
+    text-align:center;
+    font-family: Albert Sans;
+}
+
+img{
+ width: 100%;
+}
+
+
+
+
+
+/*-----------------------------------------*/
+/*HERO-IMAGE*/
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    /* Gør videoen lidt sløret */
+    filter: blur(10px);
+
+    /* Zoomer lidt ind, så blur ikke giver hvide kanter */
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    padding: 14px 30px;
+    background: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    z-index: 0;
+    font-family: Albert Sans;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--kontrast4);
+}
+
+
+
+.produkttekst{
+  color:#72DF76;
+  font-size:20px;
+  font-weight: 100;
+  font-family: Albert Sans;
+}
+.hero-text strong {
+    font-weight: bold;
+    color: #72DF76;
+    font-size:30px;
+    font-family: Albert Sans;
+}
+
+.mellemtekst{
+  color:var(--kontrast4);
+  font-size:60px;
+  font-family: Albert Sans;
+
+}
+
+.UnderTekst1{
+  color: var(--tekst);
+  margin-left:5px;
+  margin-right:300px;
+  text-align: center;
+}
+
+.UnderTekst2{
+  color: var(--tekst);
+  margin-right: 5px;
+  margin-left:300px;
+  text-align:center;
+}
+
+
+/*-----------------------------------------*/
+
+
+/*TEKST UNDER HERO-IMAGE*/
+
+.underhero1{
+  font-size:60px;
+  color:var(--kontrast4);
+  margin: 2%;
+  font-family: Albert Sans;
+  text-align: center;
+}
+
+.underhero2{
+  font-size:20px;
+  color:var(--kontrast4);
+  margin:2%;
+  font-weight: 100;
+  font-family: Albert Sans;
+  text-align: center;
+}
+/*-----------------------------------------*/
+
+/*FLEX MED PROCENTER OG BILLEDE AF UR*/
+
+.urprocent{
+  display:flex;
+  padding:23px;
+  justify-content: space-around;
+  align-items: center;
+  gap:100px; /*hvis der ønskes et form for gap skal 
+    man finde den del i css, hvor man ønsker at der skal være gap 
+    mellem tingene*/
+}
+
+.ur{
+  width: 900px;
+    position: absolute;
+    left: 50%;
+    bottom: -600px;
+    transform: translateX(-50%);
+    z-index: 0;
+    margin-right: 7%;
+}
+
+
+.venstreprocent{
+  font-size:6rem; /* 2.5 * 16 = 40px */
+  font-weight: 100;
+  color:var(--kontrast4);
+  font-family: Albert Sans;
+  margin-left: 10%;
+  
+}
+
+p{
+  color:var(--kontrast4);
+  font-family: Albert Sans;
+}
+
+.højreprocent{
+  font-size: 6rem; /* 2.5 * 16 = 40px */
+  font-weight: 100;
+  color:var(--kontrast4);
+  font-family: Albert Sans;
+  margin-left: 60%;
+  gap:70px;
+  
+}
+
+p{
+  color:var(--kontrast4);
+  font-family: Albert Sans;
+}
+
+/*-----------------------------------------*/
+/*FUNKTIONER MED HOVERTEKST OVER BILLEDE*/
+
+.funktionerh{
+  display:flex;
+  padding:2px;
+  justify-content: space-around;
+  align-items: center;
+  gap:15px; /*hvis der ønskes et form for gap skal 
+    man finde den del i css, hvor man ønsker at der skal være gap 
+    mellem tingene*/
+  
+  min-height: 70vh;
+}
+
+.hoverbilleder {
+  position: relative;
+  width: 350px;
+  border-radius: 20px;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position:absolute;
+  bottom: 25%;
+  right: 0;
+  height: 100%;
+  width: 350px;
+  opacity:0;
+  transition: .3s ease;
+  background-color: #454545;
+  border-radius: 1px;
+  border: 4px solid #373737;
+}
+
+.lillehovertekst{
+  padding-top: 15%;
+  text-align: center;
+  margin-left:5px;
+  margin-right:5px;
+}
+
+
+.hoverbilleder:hover .overlay {
+  opacity: 1;
+}
+
+
+
+.puls1{
+  color: var(--sovn);
+  font-size: 20px;
+  font-family: Albert Sans;
+  text-align: center;
+}
+
+.puls2{
+  color:var(--kontrast4);
+  font-size:37px;
+  font-family: Albert Sans;
+  text-align: center;
+}
+
+.puls3{
+  color:var(--kontrast4);
+  font-size:20px;
+  font-weight:100;
+  text-align: center;
+  font-family: Albert Sans;
+}
+
+
+/*-----------------------------------------*/
+/*IKONER MED VIGTIG OPLYSNINGER OMKRING URET*/
+
+
+.ikonerunderhover{
+  display:flex;
+  background-color: var(--baggrund);
+  gap:80px;
+  margin-left: 75px;
+}
+
+.ikonerarticle{
+  background-color: #545453;
+  align-items: center;
+  text-align: center;
+  border-radius:60px;
+  margin-left:65px;
+  margin-top:30px; /*dette er afstanden fra selve hvert enkelt boks til containerens omkreds*/
+  margin-bottom: 30px;
+}
+
+.ikonerunderhover img{
+  width: 50px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.ikonerunderhover h3{
+  font-size:30px;
+  color:white;
+  font-family: Albert Sans;
+}
+
+.ikonerunderhover h2{
+  font-size:18px;
+  color:white;
+  font-family: Albert Sans;
+  margin:3%;
+  margin-bottom: 20px;
+  padding:20px;
+}
+
+
+
+/*-----------------------------------------*/
+
+/*TING OMKRING SØVN/RESTITUTION*/
+
+.sovn{
+  display:flex;
+  padding:23px;
+  justify-content: space-around;
+  align-items: center;
+  gap:50px; /*hvis der ønskes et form for gap skal 
+    man finde den del i css, hvor man ønsker at der skal være gap 
+    mellem tingene*/
+}
+
+.sovnbillede{
+  height:500px;
+  width: auto;
+}
+
+.sovn1{
+  color:var(--sovn);
+  font-size: 30px;
+  margin: 2%;
+  font-family: Albert Sans;
+}
+
+
+.sovn2{
+  font-size:50px;
+  color:var(--kontrast4);
+  margin: 2%;
+  font-family: Albert Sans;
+}
+
+.sovn3{
+  font-size:20px;
+  color:var(--kontrast4);
+  font-family: Albert Sans;
+}
+
+.sovn4,.sovn5,.sovn6{
+  font-size:15px;
+  color:var(--kontrast4);
+  font-family: Albert Sans;
+}
+
+
+/*-----------------------------------------*/
+
+/*SPECIFIKATIONER*/
+
+.specifikationer{
+  align-items: center;
+  margin: 10px;
+  font-family: Albert Sans;
+}
+
+.s1{
+  color:var(--kontrast1);
+  font-size:25px;
+  font-family: Albert Sans;
+  margin-bottom: 10px;
+}
+
+.s2{
+  font-size:18px;
+  color:var(--kontrast5)
+}
+
+.UnderTekst{
+  display: flex;
+  text-align: center;
+  margin-left:7px; /*dette er hvor langt fra tingene er fra venstre side - fordi det er lavt, er det fordi det er forholdsvis tæt på*/
+  gap:20px;
+}
+
+.UnderTekst article{
+  font-size:20px;
+  background-color: #3b3b3b;
+  border-radius: 20px;
+}
+
+.UnderTekst img{
+  width: 90px;
+}
+
+
+
+.specifikationer1{
+  color:var(--sovn);
+  font-size: 30px;
+  margin: 2%;
+  font-family: Albert Sans;
+  text-align: center;
+}
+
+.specifikationer2{
+  font-size:50px;
+  color:var(--kontrast4);
+  margin: 2%;
+  font-family: Albert Sans;
+  text-align:center;
+}
+
+.specifikationerbillede{
+  width: 90%;
+  margin-left:60px;
+}
+
+
+
+body {
+  background: #292927;
+  font-family: Albert Sans;
+  margin-bottom: 25px;
+}
+
+
+
+
+
+/*-----------------------------------------*/
+
+/*ANMELDELSER*/
+
+.anmeldelserclass{
+  color:var(--overskrifter);
+  font-size:50px;
+  text-align: center;
+  font-family: Albert Sans;
+}
+
+
+
+.reviews {
+    display: flex;
+    gap: 10px;
+    justify-content: auto;
+    align-items: center;
+    padding: 20px;
+    background:#3b3b3b;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.review-card {
+    width: 230px;
+    min-height: 230px;
+    padding: 20px 24px;
+    flex: 1;
+
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+
+    color: var(--kontrast4);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.stars {
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.review-text {
+    font-size: 15px;
+    line-height: 1.45;
+    color: var(--kontrast4);
+    flex-grow: 1;
+}
+
+.review-person {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 14px;
+}
+
+.person-info {
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.person-info span {
+    color: #dddddd;
+}
+
+.review-person img {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.flerebilleder{
+  width: 50%;
+  align-items: center;
+}
+
+
+
+
+/* Mobil */
+
+@media (max-width: 768px) {
+
+    .reviews {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .review-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+}
+
+
+
+/*-----------------------------------------*/
+
+/*COMMUNITY*/
+
+.PC{
+  display:flex;
+  padding:23px;
+  justify-content: space-around;
+  align-items: center;
+  gap:50px; /*hvis der ønskes et form for gap skal 
+    man finde den del i css, hvor man ønsker at der skal være gap 
+    mellem tingene*/
+}
+
+.chovedtekst{
+  color:var(--kontrast1);
+  font-size: 50px;
+}
+
+.faellesskab{
+  color:var(--kontrast4);
+  font-size: 35px;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.hovedtekst{
+  color:var(--kontrast4);
+  font-weight: 200;
+  font-size: 15px;
+}
+
+.cbillededel1{
+  width:120%;
+}
+
+.buttonc{
+  border: 2px solid var(--kontrast1);
+  background-color:var(--baggrund);
+}
+
+.knaptekstc{
+  color:var(--kontrast1);
+}
+
+
+.pcdel2 {
+  display: flex; 
+  justify-content: center;
+  gap:100px;
+  padding: 50px 70px;
+  
+}
+
+.pcdel2tekst {
+  color: var(--kontrast4); 
+  font-size: 30px; 
+  position: absolute;
+  left: 50px;
+  top: auto;
+  margin-top: -10px;
+  font-weight: 200;
+}
+
+.strongpc{
+  font-size: 30px;
+  color: var(--kontrast4);
+  font-weight: 700;
+}
+
+
+.navigationroutes img{
+width: 100%; 
+height: 500px; 
+object-fit: cover; /* beskærer billedet pænt */
+border-radius: 52px; 
+display: block;
+margin-top: -70px;
+}
+
+
+.navigationroutes h3 {
+font-size: 20px;
+text-align: center;
+color: var(--kontrast4);
+margin-left: -95px;
+margin-top: -75px;
+}
+
+
+.community2 img{
+width: 180%; 
+height: 330px; 
+object-fit: cover; /* beskærer billedet pænt */
+border-radius: 52px; 
+display: block;
+margin-left: -150px;
+border: 2px solid var(--kontrast1)
+}
+
+.community2 h3 {
+font-size: 20px;
+text-align: center;
+color: var(--kontrast4);
+margin-left: -160px;
+}
+
+
+.analysisanddata img{
+width: 100%;
+height: 330px;
+object-fit: cover; /* beskærer billedet pænt */
+border-radius: 52px;
+display: block;
+border: 2px solid var(--kontrast1)
+}
+
+.analysisanddata h3 {
+font-size: 20px; 
+text-align: center;
+color: var(--kontrast4);
+}
+
+
+
+/*------------------App-----------------------*/
+
+/*------------Baggrundsbillede----------------*/
+.AppOmraade {
+  position: relative;
+  overflow: hidden;
+}
+
+.MapBaggrund {
+  position: absolute;
+  width: 100%;
+  opacity: 10%;
+  z-index: 0;
+  margin: 0%;
+}
+
+/* -------------- OVERSKRIFT ------------- */
+.AppTekst {
+    font-size: 45px;
+    font-weight: 600;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* ----------- TELEFON-CONTAINER ------------------ */
+.TreMobiler {
+    width: 1000px; /*var før 700px*/
+    display: block; 
+    margin: 0 auto;
+}  
+
+
+/* Overlappning af telefoner og boks */
+
+.AppSektion {
+    position: relative;
+}
+
+.TekstboksTilAppen {
+    position: relative;
+}
+
+.TreMobiler {
+    position: relative;
+    z-index: 2;
+    top: 80px;
+}
+
+
+
+
+/* ------------- TEKSTBOKS --------------- */
+.TekstboksTilAppen  {
+    width: 700px;
+    padding: 50px;
+    background-color: var(--kontrast5);
+    border-radius: 20px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+/* Teksten i boksen */
+
+.TekstboksTilAppen h3 {
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 2;
+    text-align: center;
+    font-weight: 100;
+    font-family:  Albert Sans;
+  }
+
+.TekstboksTilAppen  h4{
+    color: #d1d1d1;
+    font-size: 15px;
+    line-height: 2;
+    text-align: center;
+    font-weight: 100;
+    font-family:  Albert Sans;
+}
+
+
+
+/* -------------  KNAP -------------- */
+
+
+.button {
+    padding: 14px 28px;
+    background-color: #9dd473;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+/*------------------Køb i bunden-----------------------*/
+
+.produkt {
+    padding: 65px 8%;
+}
+
+ .KøbOverskrift{
+    font-size: 68px;
+    font-weight: 300;
+    line-height: 1.25;
+    margin-bottom: 25px;
+    color: var(--kontrast4);
+ }
+
+ .beskrivelse{
+    color: var(--tekst);
+    font-size: 26px;
+    line-height: 1.4;
+    margin-left: 15px;
+    margin-bottom: 35px;
+    padding: 70px 7% 25px;
+
+    
+ }
+
+ .PrisBox {
+    background-color: #3a3937;
+    border-radius: 24px;
+    padding: 40px 75px;
+
+    /* Lægger tingene på én linje */
+    display: flex;
+    align-items: center;
+    gap: 50px;
+ }
+
+ .KøbHer{
+  margin: 4%;
+ }
+
+ strong {
+    font-size: 70px;
+    color: var(--kontrast4);
+ }
+
+ #AndenPulse{
+  font-size:30px;
+  font-weight: bold;
+  color: var(--kontrast1);
+ }
+
+ .pris-box p {
+    color: #aaa8a3;
+    font-size: 26px;
+}
+
+button {
+    margin-left: auto;
+    background-color: var(--kontrast1);
+    border: none;
+    border-radius: 40px;
+    padding: 20px 55px;
+    color: #2c6032;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+
+/*------------------Footer-----------------------*/
+
+.footer {
+    background: #242422;
+    color: var(--kontrast4);
+    padding: 30px 3% 30px;
+    border-top: 1px solid var(--kontrast1);
+    z-index:999;
+}
+
+
+/* TOP */
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 80px;
+    padding-bottom: 70px;
+}
+
+
+/* PULSE */
+
+.footer-brand h2 {
+    color:  var(--kontrast1);
+    font-size: 55px;
+    margin: 0;
+    letter-spacing: -2px;
+}
+
+
+
+/* LINKS */
+
+.footer-links {
+    display: flex;
+    grid-template-columns:
+        repeat(4, 1fr);
+    gap: 30px;
+
+   background-color:#242422;
+   text-align: center;
+   align-items:top;
+   margin-top: 30px;
+}
+
+.footer-links article {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+
+}
+
+.footer-links h3 {
+    color:  var(--kontrast1);
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.footer-links a {
+    color: var(--kontrast4);
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.footer-links a:hover {
+    color: var(--kontrast1);
+    transform: translateX(4px);
+}
+
+
+/* BUND */
+
+.footer-bottom {
+    border-top: 1px solid #454541;
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+
+.footer-bottom p {
+    color: var(--kontrast5);
+    font-size: 13px;
+}
+
+
+/* SOCIALS */
+
+.socials {
+    display: flex;
+    gap: 25px;
+    background-color:#242422;
+}
+
+.socials a {
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.2s;
+    color:var(--kontrast5);
+}
+
+.socials a:hover {
+    color: var(--kontrast1);
+}
+
+
+
+    
+
+
+
+
+
